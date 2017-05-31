@@ -1,0 +1,112 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+  <script type="text/javascript">
+	  $(document).ready(function(){
+      	$('p').each(function(){
+      	    $(this).replaceWith('<p style="margin: 1.5em 15px !important;color: #898989;">'+$(this).html()+'</p>');
+      	});
+		
+    	$('h1').each(function(){
+    	    $(this).replaceWith('<section data-role="outer" style="font-size:16px;"><section style="height: 40px;z-index:0;margin: 10px 10px 30px 10px; color: rgb(102, 102, 102); text-align: center; font-size: 16px; border-style: solid; -webkit-border-image: url(&quot;http://mmbiz.qpic.cn/mmbiz_png/fgnkxfGnnkS3q7kcqWSIgKyScCBibjiasG37kbbicr3XQdqQjKoOJH1MVZDPaSQIQaGjEWSXwQTia7TqkszDg3ItRw/0?wx_fmt=png&quot;) 130 fill; border-width: 20px; box-sizing: border-box;"><p data-brushtype="text" style="white-space: normal;margin-top: -13px;">读完本文大约需要<strong> '+parseInt(parseInt($(this).text(), 10)/600)+' </strong>分钟<span style=""></span></p></section></section></section></section>');
+    	});
+    	$('h2').each(function(){
+    	    $(this).replaceWith('<h2 style="font-size: 20px;margin: 5px 0px;padding-bottom: 0px;position: relative;">'+$(this).html()+'</h2><h2 style="font-size: 10px; margin-top: 0px; margin-bottom: 10px;white-space: normal; max-width: 100%; color: white; border-left-width: 35px; border-left-style: solid; border-left-color: #2196F3; background: #64B5F6;padding: 4;font-weight: bold;font-style: bold !important;color: #3E3E3E !important;text-align: left !important;padding: 0.5em 0;color: #424242;"></h2>');
+    	});
+    	$('h3').each(function(){
+    	    $(this).replaceWith('<h3 style="font-size: 18px;margin: 5px 5px;padding-bottom: 0px;position: relative;">'+$(this).html()+'</h3><h3 style="font-size: 8px; margin-top: 0px; margin-bottom: 10px;margin-left: 5px;white-space: normal; max-width: 100%; color: white; border-left-width: 35px; border-left-style: solid; border-left-color: #42A5F5; background: #90CAF9;padding: 4;font-weight: bold;font-style: bold !important;color: #3E3E3E !important;text-align: left !important;padding: 0.5em 0;color: #424242;"></h3>');
+    	});
+    	$('h4').each(function(){
+    	    $(this).replaceWith('<h4 style="font-size: 16px;margin: 5px 10px;padding-bottom: 0px;position: relative;">'+$(this).html()+'</h4><h4 style="font-size: 6px; margin-top: 0px; margin-bottom: 10px;margin-left: 10px;white-space: normal; max-width: 100%; color: white; border-left-width: 35px; border-left-style: solid; border-left-color: #42A5F5; background: #90CAF9;padding: 4;font-weight: bold;font-style: bold !important;color: #3E3E3E !important;text-align: left !important;padding: 0.5em 0;color: #424242;"></h4>');
+    	});
+    	$('h5').each(function(){
+    	    $(this).replaceWith('<h5 style="margin: 20px 0 10px;padding: 4;font-weight: bold;font-style: bold !important;color: #3E3E3E !important;text-align: left !important;margin:1em auto;padding: 0.5em 0;color: #424242;">'+$(this).html()+'</h5>');
+    	});
+    	$('h6').each(function(){
+    	    $(this).replaceWith('<h6 style="margin: 20px 0 10px;padding: 4;font-weight: bold;font-style: bold !important;color: #3E3E3E !important;text-align: left !important;margin:1em auto;padding: 0.5em 0;color: #424242;">'+$(this).html()+'</h6>');
+    	});
+    	$('strong').each(function(){
+    	    $(this).replaceWith('<strong style="color: #4D4D4B;font-weight: bold;font-style: bold !important;">'+$(this).html()+'</strong>');
+    	});
+		// b 加粗标签
+    	$('b').each(function(){
+    	    $(this).replaceWith('<b style="color: #898989;font-weight: bold;font-style: bold !important;">'+$(this).html()+'</b>');
+    	});
+		// em 强调
+    	$('em').each(function(){
+    	    $(this).replaceWith('<em style="color: #424242;">'+$(this).html()+'</em>');
+    	});
+		// i 斜体
+    	$('i').each(function(){
+    	    $(this).replaceWith('<i style="color: #424242;">'+$(this).html()+'</i>');
+    	});
+		
+		// hr 横线
+    	$('hr').each(function(){
+    	    $(this).replaceWith('<hr style="border: 1px solid #C5E1A5;margin: 1.5em auto;">'+$(this).html()+'</hr>');
+    	});
+		
+		// ol 列表 数字
+    	$('ol').each(function(){
+    	    $(this).replaceWith('<ol style="color:#2196F3;margin:0px 0px 20px 10px;">'+$(this).html()+'</lo>');
+    	});
+		// li 表格里的每一个
+    	$('li').each(function(){
+    	    $(this).replaceWith('<li style="margin: 10px;"><p style="color:#898989;margin:0px 0px 0 5px;">'+$(this).html()+'</p></li>');
+    	});
+		
+		// ul 列表 圆圈 ul 里也有 li
+    	$('ul').each(function(){
+    	    $(this).replaceWith('<ul style="list-style-type: circle;margin: 10px 5px;">'+$(this).html()+'</ul>');
+    	});
+		
+		// dl dt dd 说明
+    	$('dl').each(function(){
+    	    $(this).replaceWith('<dl style="padding: 0;margin: 10px 5px;font-size: 1em;font-weight: bold;font-style: italic;margin: 0 0 10px;padding: 0 10px;">'+$(this).html()+'</dl>');
+    	});
+    	$('dt').each(function(){
+    	    $(this).replaceWith('<dt style="font-size: 1em;font-weight: bold;font-style: italic;margin: 0 0 10px;padding: 0 10px;">'+$(this).html()+'</dt>');
+    	});
+    	$('dd').each(function(){
+    	    $(this).replaceWith('<dd style="font-size: 1em;font-weight: bold;font-style: italic;margin: 0 0 10px;padding: 0 10px;">'+$(this).html()+'</dd>');
+    	});
+		
+		// 引用
+    	$('blockquote').each(function(){
+    	    $(this).replaceWith('<blockquote style="margin: 20px 15px 20px 15px;border-left: 8px solid #64B5F6;padding-top: 1px;padding-bottom: 1px;color: #777777;quotes: none;background-color: #E3F2FD;">'+$(this).html()+'</blockquote>');
+    	});
+		// q ""
+    	$('q').each(function(){
+    	    $(this).replaceWith('<q style="margin: 10px 5px;border-left: 8px solid #64B5F6;padding-top: 1px;padding-bottom: 1px;color: #777777;quotes: none;margin-left: 15px;background-color: #E3F2FD;">'+$(this).html()+'</q>');
+    	});
+    	$('blockquote p').each(function(){
+    	    $(this).replaceWith('<p style="margin: 10px 10px 10px 10px;">'+$(this).html()+'</p>');
+    	});
+    	// $('li p').each(function(){
+    	//     $(this).replaceWith('<p style="color:#898989;margin:0px 0px 0 5px;">'+$(this).html()+'</p>');
+    	// });
+    	// $('ul ul').each(function(){
+    	//     $(this).css({"margin":"0", "padding-left":"10px"});
+    	// });
+    	// $('ul ol').each(function(){
+    	//     $(this).css({"margin":"0", "padding-left":"10px"});
+    	// });
+    	// $('ol ul').each(function(){
+    	//     $(this).css({"margin":"0", "padding-left":"10px"});
+    	// });
+    	// $('ol ol').each(function(){
+    	//     $(this).css({"margin":"0", "padding-left":"10px"});
+    	// });
+	});
+  </script>
+
+	
+</head>
+<body style="font-family: sans-serif;font-size: 15px;line-height: 28px;letter-spacing: 1px;word-wrap: break-word !important;">
+
+
+</body>
+
+
+</html>
